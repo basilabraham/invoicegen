@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        .btn {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: RoyalBlue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <p>Icon buttons with text:</p>
+    <button class="btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-home"></i> Home</button>
+    <button class="btn"><i class="fa fa-bars"></i> Add Customer</button>
+    <button class="btn" data-toggle="modal" data-target="#invoiceModal"><i class="fa fa-money"></i> Invoice</button>
+    <button class="btn"><i class="fa fa-close"></i> Close</button>
+    <button class="btn"><i class="fa fa-folder"></i> View Bills</button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Customer</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="customerName">Customer Name</label>
+                            <input type="text" class="form-control" id="customerName" aria-describedby="nameHelp" placeholder="Enter Name">
+                            <small id="nameHelp" class="form-text text-muted">Customer Name</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Address</label>
+                            <textarea class="form-control" rows="5" id="customerAddress" aria-describedby="nameHelp" placeholder="Enter Customer address"></textarea>
+                            <small id="addressHelp" class="form-text text-muted">Customer Address</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" class="form-control" id="phoneNumber">
+
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <div class="modal" id="invoiceModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Generate Invoice</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="customerName">Customer Name</label>
+                            <input type="text" class="form-control" id="invcustomerName" aria-describedby="nameHelp" placeholder="Enter Name">
+                            <small id="cusnameHelp" class="form-text text-muted">Customer Name</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Address</label>
+                            <textarea class="form-control" rows="5" id="invcustomerAddress" aria-describedby="nameHelp" placeholder="Enter Customer address"></textarea>
+                            <small id="custaddressHelp" class="form-text text-muted">Customer Address</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" class="form-control" id="phoneNumber">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="matrialDescription">Material Description</label>
+                            <input type="text" class="form-control" id="matrialDescription">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="unitofmeasure">Unit of Measurer</label>
+                            <input type="text" class="form-control" id="unitofmeasure">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="unitprice">Unit Price</label>
+                            <input type="text" class="form-control" id="unitprice">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="qty">Qty</label>
+                            <input type="text" class="form-control" id="qty">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
